@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/config-cache', function () {
+    Artisan::call('config:cache');
+    return "Config Cache Cleared!";
+});
